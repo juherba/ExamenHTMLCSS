@@ -1,0 +1,377 @@
+/* Inport google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* 
+    font-family: 'Poppins', sans-serif;
+*/
+
+/* Variables default */
+
+:root {
+    --bg-color: #161413;
+    --bg-nav: #1D1A18;
+    --button-default: #FC6A2E;
+    --button-hover: #7FB13E;
+    --text-color: white;
+    --sec-bg-color: #25231E;
+}
+
+/* Default config */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.default-button {
+    background-color: var(--button-default);
+    border-radius: 5px;
+    padding: 4% 7%;
+    border: 0px;
+}
+
+.default-button:hover {
+    background-color: var(--button-hover);
+    transition: .5s;
+}
+
+
+/* Config menu */
+.header-container {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.menu {
+    background-color: var(--bg-nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 15%;
+}
+
+.logo {
+    width: 15%;
+    margin-right: 7%;
+    margin-top: -5px;
+}
+
+.text-logo {
+    margin-left: 2%;
+    font-weight: 600;
+    padding-top: 1%;
+}
+
+.menu_items {
+    display: flex;
+    list-style: none;
+
+}
+
+.menu_items li {
+    width: 110px;
+    margin: 0 5px;
+    padding: 2%;
+}
+
+.menu_items li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.menu_items li a:hover {
+    color: var(--main-color);
+    transition: .5s;
+    color: var(--button-default);
+}
+
+.btn_menu{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show {
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    box-shadow: 0px 0px 0px;
+    background-color: var(--sec-bg-color);
+}
+
+.araña {
+    display: none;
+}
+
+/* Config first div */
+
+.start-div{
+    background: url('img/portrait.png') top center no-repeat;
+    background-size: cover;
+    height: 120vh;
+}
+
+.start-text h1{
+    font-size: 3em;
+    font-weight: 1000;
+}
+
+.start-text {
+    padding: 10% 10%;
+    width: 40%;
+}
+
+.little {
+    font-size: 0.8em;
+    margin-bottom: 10%;
+}
+
+.img-adjust {
+    width: 50%;
+}
+
+h5 {
+    font-weight: 600;
+}
+
+.text-adjust {
+    font-weight: 100;
+}
+
+.col-adjust{
+    margin-top: 5%;
+}
+
+.margintop{
+    margin-top: 5%;
+} 
+
+.img-about {
+    width: 80%;
+}
+
+.trick-container {
+    margin: 0% 10%;
+}
+
+.candy-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2% 5%;
+    width: 80%;
+}
+
+.candy-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec-bg-color);
+    border-radius: 20px;
+    width: 25%;
+    padding: 2%;
+    margin: 2%;
+}
+
+.candy-card img {
+    width: 50%;
+}
+
+.text-sick {
+    font-weight: 1000;
+    margin-top: 5%;
+}
+
+/* Discount config */
+
+.discount-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec-bg-color);
+    padding: 8%;
+    border-radius: 50px;
+    margin-top: 5%;
+}
+
+.discount-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.img-discount {
+    width: 50%;
+}
+
+/* News config */
+
+.fake-form {
+    background-color: var(--sec-bg-color);
+    padding: 1%;
+    width: 26%;
+    border-radius: 10px;
+}
+
+.fake-form input {
+    background-color: transparent;
+    border: none;
+}
+
+/* Pre-footetr config */
+
+.pre-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 15%;
+    margin-top: 5%;
+}
+
+.pre-footer > div{
+    width: 25%;
+}
+
+/* Footer config */
+
+footer {
+    padding: 2%;
+}
+
+
+@media screen and (max-width: 528px){
+    .logo {
+        width: 20%;
+    }
+
+    .araña {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20%;
+    }
+
+    .menu {
+        padding: 4%;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    .menu_items {
+        display: inline-block;
+        position: fixed;
+        width: 100vw;
+        background-color: var(--main-color);
+        top: 8%;
+        left: -100vh;
+        text-align: center;
+        transition: all .4s;
+        padding-bottom: 10%;
+        border-radius: 0px 0px 10% 10%;
+    }
+
+    .menu_items li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    .menu_items li a {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .menu_items li a:hover {
+        color: white;
+    }
+
+    .start-text {
+        width: 50%;
+        padding: 40% 5%;
+    }
+
+    .default-button {
+        padding: 10% 12%;
+    }
+
+    .start-div {
+        background-size: cover;
+    }
+
+    .img-about {
+        width: 50%;
+    }
+
+    .xs-adjust {
+        margin: 2% 35%;
+        padding: 2% 5%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .text-sick {
+        margin-top: 15%;
+    }
+
+    .candy-card {
+        width: 40%;
+    }
+
+    .candy-container {
+        width: 100%;
+    }
+
+    .trick-container {
+        margin: 0% 0%;
+    }
+
+    .discount-container {
+        flex-direction: column-reverse;
+    }
+
+    .news-container{
+        margin-top: 15%;
+    }
+
+    .fake-form {
+        width: 78%;
+        padding: 2%;
+    }
+
+    .fake-form button {
+        padding: 2% 5%;
+    }
+
+    .pre-footer {
+        flex-direction: column;
+        padding: 0;
+        margin: 10% 5%;
+        justify-content: flex-start;
+    }
+
+    .pre-footer > div {
+        width: 100%;
+    }
+}
